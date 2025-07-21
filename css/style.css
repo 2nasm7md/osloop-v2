@@ -1,0 +1,282 @@
+/* --------------- Start Style guide--------------  */
+:root {
+  --color-grey-50: rgb(253, 253, 253);
+  --color-grey-100: rgb(248, 248, 248);
+  --color-grey-200: rgb(244, 244, 245);
+  --color-grey-300: rgb(240, 239, 240);
+  --color-grey-400: rgb(237, 236, 237);
+  --color-grey-500: rgb(232, 231, 233);
+  --color-grey-600: rgb(211, 210, 212);
+  --color-grey-700: rgb(165, 164, 165);
+  --color-grey-800: rgb(128, 127, 128);
+  --color-grey-900: rgb(97, 97, 98);
+
+  --color-black-100: rgba(14, 24, 37, 1);
+  --color-black-200: rgba(11, 6, 16, 1);
+
+  --color-primary-50: rgb(240, 235, 245);
+  --color-primary-100: rgb(208, 192, 223);
+  --color-primary-200: rgb(185, 161, 208);
+  --color-primary-300: rgb(153, 118, 186);
+  --color-primary-400: rgb(133, 92, 173);
+  --color-primary-500: rgb(103, 51, 152);
+  --color-primary-600: rgb(94, 46, 138);
+  --color-primary-700: rgb(73, 36, 108);
+  --color-primary-800: rgb(57, 28, 84);
+  --color-primary-900: rgb(43, 21, 64);
+
+  --border-radius-8: 0.5rem;
+  --border-radius-16: 1rem;
+  --border-radius-24: 1.5rem;
+}
+html {
+  direction: rtl;
+}
+body {
+  font-family: "IBM Plex Sans Arabic", sans-serif !important;
+  font-size: 1rem;
+  line-height: 100%;
+}
+ul,
+ol {
+  list-style: none;
+}
+textarea {
+  resize: none !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+h1 {
+  font-size: 3.5rem !important;
+}
+h2 {
+  font-size: 3rem !important;
+}
+h3 {
+  font-size: 2.5rem !important;
+}
+h4 {
+  font-size: 2rem !important;
+}
+h5 {
+  font-size: 1.5rem !important;
+}
+h6 {
+  font-size: 1.25rem !important;
+}
+@media (max-width: 575.98px) {
+  h4 {
+    font-size: 1.5rem !important;
+  }
+  h5 {
+    font-size: 1.25rem !important;
+  }
+}
+/* --------------- End Style guide--------------  */
+
+/* ----------------- Start Custom utility Classes ------------  */
+/* Buttons  */
+.csm_primary-btn {
+  background-color: var(--color-primary-500) !important;
+  padding: 0.75rem 2.9rem !important;
+  border: none !important;
+  font-weight: 700 !important;
+}
+.csm_primary-btn:hover {
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 0px 5px rgba(103, 51, 152, 0.3);
+}
+/* spacing  */
+.csm_container {
+  width: 100%;
+  max-width: 708px;
+  margin: 0 auto;
+}
+.csm_pb-12 {
+  padding-bottom: 0.75rem;
+}
+.csm_pt-12 {
+  padding-top: 0.75rem;
+}
+/* fonts  */
+.csm_fs-24 {
+  font-size: 1.5rem;
+}
+.csm_fs-18 {
+  font-size: 1.125rem;
+}
+.csm_fs-14 {
+  font-size: 0.875rem;
+}
+.csm_fs-12 {
+  font-size: 0.75rem;
+}
+.csm_fw-700 {
+  font-weight: 700;
+}
+.csm_btn-primary:hover {
+  background-color: var(--color-grey-50);
+}
+.csm_fc-primary {
+  color: var(--color-primary-500);
+}
+.csm_fc-grey-900 {
+  color: var(--color-grey-900);
+}
+@media (min-width: 576px) {
+  .csm_gap-sm-32 {
+    gap: 2rem;
+  }
+}
+.csm_input {
+  border-radius: var(--border-radius-8);
+  border: 0.5px solid var(--color-grey-700);
+  box-shadow: 0px 2px 3px 0px rgba(184, 184, 184, 0.1) inset;
+  padding: 0.75rem 0.5rem;
+}
+.csm_input:focus {
+  border: 1px solid var(--color-primary-500) !important;
+  outline: none !important;
+  background-color: var(--color-grey-100);
+}
+.csm_input:hover:not(.csm_input-file) {
+  background-color: var(--color-grey-100);
+  border: 1px solid var(--color-primary-500) !important;
+}
+.csm_textarea {
+  min-height: 7rem;
+}
+.csm_input-file {
+  border: 2px dashed rgba(20, 65, 195, 1);
+  border-radius: var(--border-radius-8);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.csm_input-file:hover {
+  background-color: rgba(20, 65, 195, 0.1);
+}
+.csm_input-email {
+  padding: 0.75rem 1.8rem;
+}
+.csm_grey-800 {
+  color: var(--color-grey-800);
+}
+/* ----------------- End Custom utility Classes ------------  */
+
+/* ------------------Start Bootstrap Override --------------- */
+.nav-pills .nav-link {
+  padding: 0.75rem 1rem;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-black-100);
+  border-radius: var(--border-radius-8) !important;
+}
+.nav-pills .nav-link.active {
+  background-color: var(--color-primary-50) !important;
+  color: var(--color-black-100) !important;
+  font-weight: 700 !important;
+}
+.nav-pills .nav-link:hover {
+  background-color: var(--color-primary-50);
+  color: var(--color-black-100);
+}
+/* ------------------End Bootstrap Override --------------- */
+
+/* ------------------Start Main Page Classes--------------  */
+.page-wrapper {
+  background: linear-gradient(
+    to bottom,
+    rgba(248, 240, 255, 0.6) 0%,
+    rgba(248, 240, 255, 0.4) 21%,
+    rgba(248, 240, 255, 0.05) 38%,
+    rgba(248, 240, 255, 0) 55%
+  );
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* --------------Start SideBar------------  */
+.sidebar-wrapper {
+  max-width: 270px;
+  width: 30%;
+  position: relative;
+}
+.sidebar-list {
+  margin-top: 5rem;
+}
+#sidebar.collapse .nav-icon {
+  margin: 0 auto;
+}
+#sidebar {
+  transition: all 0.3s;
+}
+#sidebar.collapse {
+  max-width: 10rem;
+}
+#sidebar.collapse span {
+  display: none;
+}
+#toggle-btn {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  left: -30px;
+  top: 120px;
+  height: 3.5rem;
+  width: 3.5rem;
+  border: 1px solid var(--color-grey-500);
+  background-color: white;
+  box-shadow: -2px 3px 8px 0px rgba(165, 164, 165, 0.25);
+}
+#toggle-btn:hover {
+  box-shadow: -2px 3px 8px 0px var(--color-primary-100);
+}
+#toggle-btn.collapse > img {
+  transform: rotate(180deg);
+  transition: all 0.5s;
+}
+@media (max-width: 767.98px) {
+  #sidebar {
+    display: none !important;
+  }
+}
+/* --------------End SideBar------------  */
+/* ------------- Start Main--------------  */
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+  width: 100%;
+}
+.main {
+  border: 0.5px solid var(--color-grey-700);
+  border-top-right-radius: var(--border-radius-24);
+  background-color: white;
+  flex-grow: 1;
+  text-align: center;
+  padding: 3.5rem 3rem;
+}
+@media (max-width: 767.98px) {
+  .main {
+    border: none;
+    background-color: transparent;
+    padding: 1.5rem 1.25rem;
+  }
+}
+.main-wrapper nav {
+  padding: 2rem 0;
+}
+/* ------------- End Main--------------  */

@@ -1,0 +1,101 @@
+/* ----------------- Start Stat-analysis Component  -------------*/
+.stat-analysis-header {
+  max-width: 39.875rem;
+}
+.stats-analysis-form {
+  gap: 2rem;
+}
+@media (max-width: 575.98px) {
+  .stats-analysis-form {
+    gap: 1.5rem;
+  }
+}
+.accordion-bullet {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid var(--color-grey-900);
+  padding: 3px;
+  border-radius: 50%;
+  margin-left: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.accordion-button:not(.collapsed) .accordion-bullet {
+  border: 1px solid var(--color-primary-500);
+}
+.accordion-button:not(.collapsed) .accordion-bullet .inner-bullet {
+  background-color: var(--color-primary-500);
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+.accordion-button.collapsed:hover .accordion-bullet {
+  border: 1px solid var(--color-primary-500);
+}
+.accordion-button.collapsed:hover .inner-bullet {
+  background-color: var(--color-primary-500);
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.accordion-item:has(.accordion-button:not(.collapsed)) .plan-title {
+  font-size: 1.5rem !important;
+  color: var(--color-primary-500);
+  font-weight: 700;
+}
+@media (max-width: 575.98px) {
+  .accordion-item:has(.accordion-button:not(.collapsed)) .plan-title {
+    font-size: 1.125rem !important;
+  }
+}
+.accordion-item:has(.accordion-button:not(.collapsed)) .accordion-price {
+  color: var(--color-primary-500);
+}
+.csm_input#phone {
+  padding-right: 6rem;
+}
+
+.file-box {
+  border: 1px solid var(--color-grey-800);
+  padding: 1rem;
+  border-radius: 12px;
+}
+.file-box img {
+  width: 40px;
+  height: 40px;
+}
+
+.file-box .close-btn {
+  cursor: pointer;
+}
+/* Bootstrap override  */
+.accordion-item {
+  border: 1px solid var(--color-grey-700) !important;
+  border-radius: 1rem !important;
+}
+.accordion-item > .accordion-header .accordion-button {
+  border-radius: 1rem !important;
+}
+.accordion-button::after {
+  position: absolute;
+  left: 1.5rem;
+  transform: translateY(25%);
+}
+.accordion-button:not(.collapsed)::after {
+  transform: rotate(90deg) !important;
+}
+.accordion-button:not(.collapsed) {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+.accordion-item:has(.accordion-button:not(.collapsed)) {
+  border-color: var(--color-primary-500) !important;
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+}
+.input-icon {
+  position: absolute;
+  margin: 11px 8px;
+}
+/* ----------------- End Stat-analysis Component  -------------*/
